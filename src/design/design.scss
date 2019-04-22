@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: arial;
+
+  $global-header-height: 6em;
+  $global-footer-height: 2em;
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: gray;
+    height: $global-header-height;
+  }
+
+  main {
+    background-color: orange;
+    margin-top: $global-header-height;
+    margin-bottom: $global-footer-height;
+    z-index: -1; // so header will be on top
+    min-height: 50em; // to make it long so you can see the scrolling
+
+    p {
+      margin: 10px 10px;
+    }
+  }
+
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: $global-footer-height;
+    background-color: gray;
+    text-align: center;
+  }
+}
